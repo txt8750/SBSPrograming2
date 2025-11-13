@@ -14,7 +14,7 @@ typedef struct
 {
 	int hp;
 	int atk;
-	const char* name;
+	char name[100];
 	int def;
 }Monster;
 
@@ -30,15 +30,15 @@ void PrintMonsterInfo(const Monster* monster)
 
 void SetMonsterData(Monster* monster)
 {
-	//printf("몬스터의 이름 : ");
-	//char temp[20];
-	//scanf("%s", temp);
+	printf("몬스터의 이름 : ");
+	char temp[20];
+	scanf("%s", temp);
 	
-	//strcpy(monster->name, temp);
+	strcpy(monster->name, temp);
 
 	printf("몬스터의 체력 : ");
 	scanf("%d", &(monster->hp));
-	printf("몬스터의 공력력 : ");
+	printf("몬스터의 공격력 : ");
 	scanf("%d", &(monster->atk));
 	printf("몬스터의 방어력 : ");
 	scanf("%d", &(monster->def));
