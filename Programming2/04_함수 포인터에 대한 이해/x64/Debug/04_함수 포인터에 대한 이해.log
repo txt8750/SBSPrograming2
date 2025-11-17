@@ -1,0 +1,4 @@
+﻿  04_main.c
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\04_함수 포인터에 대한 이해\04_main.c(157,15): warning C4090: '함수': 다른 'const' 한정자
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\04_함수 포인터에 대한 이해\04_main.c(34,1): warning C4716: 'Plus': 값을 반환해야 합니다.
+  04_함수 포인터에 대한 이해.vcxproj -> D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\x64\Debug\04_함수 포인터에 대한 이해.exe
