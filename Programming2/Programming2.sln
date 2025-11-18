@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_형변환과 범용 포�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_함수 포인터에 대한 이해", "04_함수 포인터에 대한 이해\04_함수 포인터에 대한 이해.vcxproj", "{66431A53-BCB7-4A89-A059-778A7F1DD532}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_자기참조구조체", "05_자기참조구조체\05_자기참조구조체.vcxproj", "{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{66431A53-BCB7-4A89-A059-778A7F1DD532}.Release|x64.Build.0 = Release|x64
 		{66431A53-BCB7-4A89-A059-778A7F1DD532}.Release|x86.ActiveCfg = Release|Win32
 		{66431A53-BCB7-4A89-A059-778A7F1DD532}.Release|x86.Build.0 = Release|Win32
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Debug|x64.ActiveCfg = Debug|x64
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Debug|x64.Build.0 = Debug|x64
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Debug|x86.Build.0 = Debug|Win32
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x64.ActiveCfg = Release|x64
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x64.Build.0 = Release|x64
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x86.ActiveCfg = Release|Win32
+		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

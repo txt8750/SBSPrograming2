@@ -1,0 +1,38 @@
+﻿  05_main.c
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(128,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(128,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(129,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(129,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(130,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(130,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(131,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(131,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(132,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(132,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(136,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(136,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(137,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(137,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(138,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(138,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(139,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\05_자기참조구조체\05_main.c(139,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+  05_자기참조구조체.vcxproj -> D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\x64\Debug\05_자기참조구조체.exe
