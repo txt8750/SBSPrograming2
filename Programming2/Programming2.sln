@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_함수 포인터에 대�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_자기참조구조체", "05_자기참조구조체\05_자기참조구조체.vcxproj", "{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_구조체와 배열과 포인터", "06_구조체와 배열과 포인터\06_구조체와 배열과 포인터.vcxproj", "{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x64.Build.0 = Release|x64
 		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x86.ActiveCfg = Release|Win32
 		{C61C9719-C0D2-4165-85F6-CA1151FE7E9C}.Release|x86.Build.0 = Release|Win32
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Debug|x64.ActiveCfg = Debug|x64
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Debug|x64.Build.0 = Debug|x64
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Debug|x86.Build.0 = Debug|Win32
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Release|x64.ActiveCfg = Release|x64
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Release|x64.Build.0 = Release|x64
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Release|x86.ActiveCfg = Release|Win32
+		{0A488CBB-AAA5-4F5E-A156-637A1F4929F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
