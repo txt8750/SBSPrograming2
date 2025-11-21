@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D54028E-6DD5-4209-82A5-2917C2FCCD3B}|07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6D54028E-6DD5-4209-82A5-2917C2FCCD3B}|07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604.vcxproj|solutionrelative:07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Title.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Title.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Title.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Title.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Screen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,39 +37,104 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 263,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 249,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "07_main.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_main.c",
-              "RelativeDocumentMoniker": "07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_main.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_main.c",
-              "RelativeToolTip": "07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\07_main.c",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF0AAAADAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\main.c",
+              "RelativeDocumentMoniker": "08_ToyProject\\main.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\main.c",
+              "RelativeToolTip": "08_ToyProject\\main.c",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-20T06:54:55.486Z",
+              "WhenOpened": "2025-11-21T07:04:24.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Screen.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.c",
+              "RelativeDocumentMoniker": "08_ToyProject\\Screen.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.c",
+              "RelativeToolTip": "08_ToyProject\\Screen.c",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-21T07:56:13.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Console.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Console.h",
+              "RelativeDocumentMoniker": "08_ToyProject\\Console.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Console.h",
+              "RelativeToolTip": "08_ToyProject\\Console.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-21T07:25:38.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Title.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Title.h",
+              "RelativeDocumentMoniker": "08_ToyProject\\Title.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Title.h",
+              "RelativeToolTip": "08_ToyProject\\Title.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-21T07:11:03.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Screen.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.h",
+              "RelativeDocumentMoniker": "08_ToyProject\\Screen.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.h",
+              "RelativeToolTip": "08_ToyProject\\Screen.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-21T07:05:38.595Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 123,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 277,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "data.json",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\data.json",
-              "RelativeDocumentMoniker": "07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\data.json",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\data.json",
-              "RelativeToolTip": "07_\uD30C\uC77C\uC2DC\uC2A4\uD15C \uAD6C\uD604\\data.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-20T08:24:45.763Z",
+              "DocumentIndex": 6,
+              "Title": "Console.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Console.c",
+              "RelativeDocumentMoniker": "08_ToyProject\\Console.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Console.c",
+              "RelativeToolTip": "08_ToyProject\\Console.c",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-21T07:25:53.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Title.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Title.c",
+              "RelativeDocumentMoniker": "08_ToyProject\\Title.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Title.c",
+              "RelativeToolTip": "08_ToyProject\\Title.c",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-21T07:11:48.633Z",
               "EditorCaption": ""
             }
           ]

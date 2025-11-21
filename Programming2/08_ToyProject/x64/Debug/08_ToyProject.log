@@ -1,0 +1,13 @@
+﻿  Title.c
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(35,2): warning C4013: '_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(44,21): warning C4129: ' ': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(44,21): warning C4129: '/': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(45,21): warning C4129: '_': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(45,21): warning C4129: ' ': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(45,21): warning C4129: '/': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(46,21): warning C4129: '|': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(47,21): warning C4129: '_': 인식할 수 없는 문자 이스케이프 시퀀스입니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\08_ToyProject\Title.c(62,6): warning C4013: '_kbhit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  main.c
+  코드를 생성하고 있습니다...
+  08_ToyProject.vcxproj -> D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\x64\Debug\08_ToyProject.exe
