@@ -1,0 +1,6 @@
+﻿  Console.c
+  RunnincAction_P.c
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\09_RunningAction Project\RunnincAction_P.c(331,13): warning C4013: '_kbhit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\09_RunningAction Project\RunnincAction_P.c(332,24): warning C4013: '_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  코드를 생성하고 있습니다...
+  09_RunningAction Project.vcxproj -> D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\x64\Debug\09_RunningAction Project.exe

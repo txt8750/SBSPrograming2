@@ -11,6 +11,7 @@
 void GameTitle()
 {	
 	int TitleCursor = 9;
+	int input = 0;
 
 	// 입력했을 때 Y 좌표가 변경 되어야 한다.
 	while (1)
@@ -35,20 +36,20 @@ void GameTitle()
 	_getch();
 }
 
-void TitleRender(int* y)
+void TitleRender(int* titleCursor)
 {
 
 	ScreenClear();
 	
 	ScreenPrint(15, 1, " _____ _____ ____ _____  ____    _    __  __ _____ _");
-	ScreenPrint(15, 2, "|_   _| ____/ ___|_   _|/ ___|  / \  |  \/  | ____| |");
-	ScreenPrint(15, 3, "  | | |  _| \___ \ | | | |  _  / _ \ | |\/| |  _| | |");
-	ScreenPrint(15, 4, "  | | | |___ ___) || | | |_| |/ ___ \| |  | | |___|_|");
-	ScreenPrint(15, 5, "  |_| |_____|____/ |_|  \____/_/   \_\_|  | |_____(_)");
+	ScreenPrint(15, 2, "|_   _| ____/ ___|_   _|/ ___|  / \\  |  \\/  | ____| |");
+	ScreenPrint(15, 3, "  | | |  _| \\___ \\ | | | |  _  / _ \\ | |\\/| |  _| | |");
+	ScreenPrint(15, 4, "  | | | |___ ___) || | | |_| |/ ___ \\| |  | | |___|_|");
+	ScreenPrint(15, 5, "  |_| |_____|____/ |_|  \\____/_/   \\_\\_|  | |_____(_)");
 	ScreenPrint(21, 9, "Start");
 	ScreenPrint(21, 11, "Score");
 	ScreenPrint(21, 13, "Quit");
-	ScreenPrint(18, *y, ">>");
+	ScreenPrint(18, *titleCursor, ">>");
 
 	ScreenFlipping();
 
@@ -87,5 +88,21 @@ void SetDataYPosInput(int* y, int MINHEIGHT, int MAXHEIGHT, int interval)
 				break;
 			}
 		}
+		if (input == 13)
+		{
+			if (*y == 9)
+			{
+				print("게임시작");
+			}
+			else if (*y == 11)
+			{
+				printf("점수 확인");
+			}
+			else if (*y == 13)
+			{
+				printf("게임 종료");
+			}
+		}
+				
 	}
 }

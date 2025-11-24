@@ -149,10 +149,8 @@ void Game()
 int main()
 {
 	// 화면을 2개 만들어 주세요
-
-	GameTitle();
 	ScreenInit();
-
+	GameTitle();
 
 	while (1) // 게임 루프
 	{
