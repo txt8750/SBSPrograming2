@@ -72,7 +72,7 @@ Jelly jellies[MAX_OBJECTS];      // 젤리 최대 5개
 int obstacle_tick = 0;
 int jelly_tick = 0;
 int game_speed = 1;     // X축 이동 속도 (점수에 따라 증가)
-int game_delay_ms = 80; // 프레임 딜레이 (ms)
+int game_delay_ms = 10; // 프레임 딜레이 (ms)
 
 
 
@@ -130,11 +130,11 @@ void spawn_obstacle() {
 void spawn_jelly() {
     int i;
     for (i = 0; i < MAX_OBJECTS; i++) {
-        if (jellies[i].is_active == 0) {
-            jellies[i].pos.x = SCREEN_WIDTH - 1;
+        if (jellies[i].is_active == 0) { // 젤리가 활성화 되지 않은 상태
+            jellies[i].pos.x = SCREEN_WIDTH - 1; // 젤리를 스크린 우측에서 생성
             // 젤리 높이는 지면(GROUND_Y)이나 공중(GROUND_Y - 1) 중 랜덤 설정
             jellies[i].pos.y = GROUND_Y - (rand() % 2);
-            jellies[i].is_active = 1;
+            jellies[i].is_active = 1; // 배열의 젤리 active를 1로 만든다
             break;
         }
     }
@@ -144,11 +144,11 @@ void spawn_jelly() {
 
 // 플레이어 업데이트 (점프 및 중력)
 void update_player(Player* p) {
-    if (p->is_jumping) {
+    if (p->is_jumping) { // 플레이어 점프상태 확인. 기본값 0(false)
         p->pos.y -= p->gravity; // 중력만큼 y좌표 변경
         p->gravity--;          // 중력 가속도 적용
 
-        if (p->pos.y >= p->base_y) {
+        if (p->pos.y >= p->base_y) { // 
             p->pos.y = p->base_y; // 지면에 착지
             p->is_jumping = 0;    // 점프 종료
             p->gravity = 0;       // 중력 초기화

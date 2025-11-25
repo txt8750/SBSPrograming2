@@ -1,0 +1,253 @@
+#define _CRT_SECURE_NO_WARNINGS // Visual Studio에서 scanf 등의 사용 경고를 무시하기 위해 필요
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <windows.h> // 콘솔 제어 및 Sleep 함수 사용
+#include <conio.h>
+#include "Console.h" // 콘솔 제어 함수 생성
+#include "Struct.h" // 구조체 생성
+
+#define SCREEN_WIDTH 70 // 스크린의 크기
+#define GROUND_Y 15 // 지면의 Y 좌표
+#define MAX_OBSTACLE 5 // 장애물의 최대 개수
+#define MAX_JELLY 10 // 젤리의 최대 개수
+
+Obstacle obstacles[MAX_OBSTACLE]; // 장애물 최대 개수. 배열
+Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
+int obstacle_tick = 0;
+int jelly_tick = 0;
+int game_speed = 1; // X축 이동속도(점수에 따라 증가)
+int game_delay_ms = 10; // 프레임 딜레이(ms)
+
+// 플레이어 정보 초기화
+// pos x, pos y, max score, current score
+// is_jumping. 점프 여부
+// gravity. 점프, 낙하 속도
+// base_y. 지면의 좌표
+// height. 플레이어의 높이(키, 충돌판정)
+// width. 플레이어의 X좌표 크기(충돌 판정)
+
+void Player_init(Player* player)
+{
+	player->pos.x = 5; // 플레이어의 초기 X좌표(사실상 고정 된 값)
+	player->pos.y = GROUND_Y; // 플레이어의 초기 Y좌표(지면에 서있음)
+	player->score.max = 0; // 최고 점수 초기화
+	player->score.current = 0; // 현재 점수 초기화
+	player->is_jumping = 0; // 점프 상태 초기화(0 : 점프 x, 1 : 점프 o)
+	player->gravity = 0; // 점프, 낙하 속도 초기화(점프하게되면 변경)
+	player->base_y = GROUND_Y; // 지면의 좌표
+	player->height = 2;
+	player->width = 2; // 2x2 사이즈의 플레이어 생성
+}
+
+// 장애물 정보 초기화
+void Obstacle_init() // 장애물은 배열의 형태로 위에서 선언 했으므로 구조체를 인수로 받지 않음
+{                    // 각 배열의 구조체에 for문을 사용하여 초기화
+	// 장애물의 pos와 type은 장애물이 활성화 되었을 때 설정을해야하므로 활성화 여부 값만 초기화
+	for (int i = 0; i < MAX_OBSTACLE; i++)
+	{
+		obstacles[i].is_active = 0;
+	}
+}
+
+
+// 젤리 정보 초기화
+void Jelly_init()
+{
+	// 젤리도 장애물과 같이 초기화 하되 형상과 점수는 같이 초기화한다.
+	// 장애물이 활성화 되었을 때 바뀌는 값이 아니기 때문
+	for (int i = 0; i < MAX_JELLY; i++)
+	{
+		jellies[i].is_active = 0;
+		jellies[i].jelly_char = "@"; //젤리 형상
+		jellies[i].point = 20; // 젤리 한개 당 점수
+	}
+}
+
+// 플레이어 업데이트 함수(점프 및 중력)
+void Player_update(Player* player)
+{
+	if (player->is_jumping) // 플레이어가 점프를 한 경우
+	{
+		// 플레이어가 점프하면 플레이어의 Y포지션을 플레이어의 점프 속도만큼 변경
+		player->pos.y -= player->gravity;
+		player->gravity--; // 중력 가속도 적용
+		if (player->pos.y >= player->base_y) //플레이거의 Y축 위치가 지면보다 높은 경우
+		{
+			player->pos.y = player->base_y; // 플레이어를 지면에 착지하게 만든다.
+			player->is_jumping = 0; // 점프하지 않은 상태로 만듦
+			player->gravity = 0; // 중력 초기화
+		}
+	}
+}
+
+// 새 장애물 생성
+void Obstacle_spawn()
+{
+	for (int i = 0; i < MAX_OBSTACLE; i++)
+	{
+		if (obstacles[i].is_active == 0)
+		{
+			obstacles[i].pos.x = SCREEN_WIDTH - 1;
+			obstacles[i].is_active = 1;
+		}
+
+		obstacles[i].pos.y = GROUND_Y;
+		obstacles[i].pos.height = rand() % 2 + 1;
+		break;
+	}
+}
+
+// 새 젤리 생성
+void Jelly_spawn()
+{
+	for (int i = 0; i < MAX_JELLY; i++)
+	{
+		if (jellies[i].is_active == 0)
+		{
+			jellies[i].pos.x = SCREEN_WIDTH - 1;
+			jellies[i].pos.y = GROUND_Y - (rand() % 2); // 젤리의 Y축 설정(랜덤). 지면이나 공중
+			jellies[i].is_active = 1;
+			break;
+		}
+	}
+}
+
+
+// 장애물, 젤리 업데이트
+void objects_update()
+{
+	for (int i = 0; i < MAX_OBSTACLE; i++) // 오브젝트 최대 개수 까지 반복한다.
+	{
+		if (obstacles[i].is_active) // 장애물이 활성화 되어있는 상태
+		{
+			obstacles[i].pos.x -= game_speed; // 장애물의 x축 위치를 왼쪽으로 옮김(game speed 만큼)
+			if (obstacles[i].pos.x < 0) // 장애물의 x축 좌표가 0미만(스크린 왼쪽 바깥으로 나가면)이면
+			{
+				obstacles[i].is_active = 0; // 장애물을 비활성화 한다.
+			}
+		}
+	}
+
+	for (int i = 0; i < MAX_JELLY; i++) // 장애물 업데이트와 동일한 내용
+	{
+		if (jellies[i].is_active)
+		{
+			jellies[i].pos.x -= game_speed;
+			if (jellies[i].pos.x < 0)
+			{
+				jellies[i].is_active = 0;
+			}
+		}
+	}
+
+	// 장애물/젤리 생성 타이머
+	obstacle_tick++;
+	jelly_tick++;
+
+	// 장애물 생성 주기
+	if (obstacle_tick > (30 / game_speed))
+	{
+		Obstacle_spawn();
+		obstacle_tick = 0;
+	}
+	// 젤리 생성 주기
+	if (jelly_tick > (15 / game_speed))
+	{
+		Jelly_spawn();
+		jelly_tick = 0;
+	}
+}
+
+// 화면 출력 함수
+void Show_Game(Player* player)
+{
+	clear_area(0, 2, SCREEN_WIDTH, GROUND_Y); // Console.c에 있는 화면 지우는 함수
+
+	// 상태 정보 출력 (상단 Y축 0,1 라인)
+	gotoxy(0, 0);
+	printf("SCORE : %d / MAX SCORE : %d / SPEED : %d\n", player->score.current, player->score.max, game_speed);
+	printf("======================================================================\n");
+
+	// 플레이어 출력
+	gotoxy(player->pos.x, player->pos.y - 1);
+	printf("ㅁ");
+	gotoxy(player->pos.x, player->pos.y);
+	printf("/\\");
+	Sleep(50);
+	gotoxy(player->pos.x, player->pos.y);
+	printf("\\/");
+
+
+
+	// 지면 출력
+	gotoxy(0, GROUND_Y + 1);
+	for (int i = 0; i < SCREEN_WIDTH; i++)
+	{
+		printf("-");
+	}
+}
+
+int main()
+{
+	Player player;
+	int is_running = 1;
+
+	// 초기화
+	Player_init(&player);
+	Obstacle_init();
+	Jelly_init();
+	hide_cursor();
+	srand((unsigned int)time(NULL));
+
+	//게임 시작
+	while (is_running) {
+		// 입력 처리
+		if (_kbhit())
+		{
+			char key = _getch(); // 입력을 받겠다.
+			if (key == 32 && player.is_jumping == 0)
+			{
+				player.is_jumping = 1;
+				player.gravity = 3; // 초기 점프속도 설정(점프 높이)
+			}
+			else if (key == 'q' || key == 'Q')
+			{
+				break;
+			}
+		}
+
+		// 게임 로직 업데이트
+		Player_update(&player);
+
+		// 화면 출력
+		Show_Game(&player);
+
+		// 프레임 딜레이
+		Sleep(game_delay_ms);
+	}
+
+	// 게임 종료 처리
+	system("cls"); // 화면 지우기
+	gotoxy(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2);
+	printf("G A M E  O V E R\n");
+	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2);
+	printf("CURRENT SCORE : %d\n", player.score.current);
+	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
+	printf("BEST SCORE : %d\n", player.score.max);
+	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
+	printf("Press any key to exit...");
+
+	return 0;
+
+}
+
+
+// version 1.0.0(2025.11.25) : 맵, 달리기 구현 완료
+//   점수, 장애물, 젤리 구현 필요
+//   BEST Score 구현 필요
+//   타이틀 화면 구현 필요
+//   점프 안되는 버그 발생 -> player.is_jumping == 1;. == 이 아닌 = 으로 바꿔서 해결
+//   게임 종료 안되는 버그 발생 -> 단일 문자 비교시 ""가 아닌 ''로 비교
+//                               else if (key == 'q' || key == 'Q') 이렇게 바꿔서 해결
