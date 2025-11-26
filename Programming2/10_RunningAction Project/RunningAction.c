@@ -7,11 +7,8 @@
 #include <conio.h>
 #include "Console.h" // 콘솔 제어 함수 생성
 #include "Struct.h" // 구조체 생성
-
-#define SCREEN_WIDTH 70 // 스크린의 크기
-#define GROUND_Y 15 // 지면의 Y 좌표
-#define MAX_OBSTACLE 5 // 장애물의 최대 개수
-#define MAX_JELLY 10 // 젤리의 최대 개수
+#include "Objects_init.h"
+#include "GlobalConst.h"
 
 Obstacle obstacles[MAX_OBSTACLE]; // 장애물 최대 개수. 배열
 Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
@@ -19,51 +16,6 @@ int obstacle_tick = 0;
 int jelly_tick = 0;
 int game_speed = 1; // X축 이동속도(점수에 따라 증가)
 int game_delay_ms = 10; // 프레임 딜레이(ms)
-
-// 플레이어 정보 초기화
-// pos x, pos y, max score, current score
-// is_jumping. 점프 여부
-// gravity. 점프, 낙하 속도
-// base_y. 지면의 좌표
-// height. 플레이어의 높이(키, 충돌판정)
-// width. 플레이어의 X좌표 크기(충돌 판정)
-
-void Player_init(Player* player)
-{
-	player->pos.x = 5; // 플레이어의 초기 X좌표(사실상 고정 된 값)
-	player->pos.y = GROUND_Y; // 플레이어의 초기 Y좌표(지면에 서있음)
-	player->score.max = 0; // 최고 점수 초기화
-	player->score.current = 0; // 현재 점수 초기화
-	player->is_jumping = 0; // 점프 상태 초기화(0 : 점프 x, 1 : 점프 o)
-	player->gravity = 0; // 점프, 낙하 속도 초기화(점프하게되면 변경)
-	player->base_y = GROUND_Y; // 지면의 좌표
-	player->height = 2;
-	player->width = 2; // 2x2 사이즈의 플레이어 생성
-}
-
-// 장애물 정보 초기화
-void Obstacle_init() // 장애물은 배열의 형태로 위에서 선언 했으므로 구조체를 인수로 받지 않음
-{                    // 각 배열의 구조체에 for문을 사용하여 초기화
-	// 장애물의 pos와 type은 장애물이 활성화 되었을 때 설정을해야하므로 활성화 여부 값만 초기화
-	for (int i = 0; i < MAX_OBSTACLE; i++)
-	{
-		obstacles[i].is_active = 0;
-	}
-}
-
-
-// 젤리 정보 초기화
-void Jelly_init()
-{
-	// 젤리도 장애물과 같이 초기화 하되 형상과 점수는 같이 초기화한다.
-	// 장애물이 활성화 되었을 때 바뀌는 값이 아니기 때문
-	for (int i = 0; i < MAX_JELLY; i++)
-	{
-		jellies[i].is_active = 0;
-		jellies[i].jelly_char = "@"; //젤리 형상
-		jellies[i].point = 20; // 젤리 한개 당 점수
-	}
-}
 
 // 플레이어 업데이트 함수(점프 및 중력)
 void Player_update(Player* player)
@@ -116,7 +68,7 @@ void Jelly_spawn()
 
 
 // 장애물, 젤리 업데이트
-void objects_update()
+void Objects_update()
 {
 	for (int i = 0; i < MAX_OBSTACLE; i++) // 오브젝트 최대 개수 까지 반복한다.
 	{
@@ -195,11 +147,11 @@ int main()
 	int is_running = 1;
 
 	// 초기화
-	Player_init(&player);
-	Obstacle_init();
-	Jelly_init();
-	hide_cursor();
-	srand((unsigned int)time(NULL));
+	Player_init(&player); // 플레이어 정보 초기화
+	Obstacle_init(); // 장애물 정보 초기화
+	Jelly_init(); // 젤리 정보 초기화
+	hide_cursor(); // 커서 숨기기
+	srand((unsigned int)time(NULL)); // 랜덤함수 초기화
 
 	//게임 시작
 	while (is_running) {
@@ -210,7 +162,7 @@ int main()
 			if (key == 32 && player.is_jumping == 0)
 			{
 				player.is_jumping = 1;
-				player.gravity = 3; // 초기 점프속도 설정(점프 높이)
+				player.gravity = 4; // 초기 점프속도 설정(점프 높이)
 			}
 			else if (key == 'q' || key == 'Q')
 			{
@@ -220,6 +172,7 @@ int main()
 
 		// 게임 로직 업데이트
 		Player_update(&player);
+		Objects_update();
 
 		// 화면 출력
 		Show_Game(&player);
@@ -248,6 +201,7 @@ int main()
 //   점수, 장애물, 젤리 구현 필요
 //   BEST Score 구현 필요
 //   타이틀 화면 구현 필요
+//   점수 저장 시스템 구현 필요 (파일 입출력)
 //   점프 안되는 버그 발생 -> player.is_jumping == 1;. == 이 아닌 = 으로 바꿔서 해결
 //   게임 종료 안되는 버그 발생 -> 단일 문자 비교시 ""가 아닌 ''로 비교
 //                               else if (key == 'q' || key == 'Q') 이렇게 바꿔서 해결

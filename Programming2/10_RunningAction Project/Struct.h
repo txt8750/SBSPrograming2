@@ -1,3 +1,7 @@
+#pragma once
+#ifndef STRUCT_H
+
+#define STRUCT_H
 // --- 구조체 정의 ---
 
 typedef struct PlayerPos { // 플레이어의 좌표
@@ -37,3 +41,5 @@ typedef struct Obstacle {
     O_Pos pos;          // 오브젝트 위치
     int is_active;      // 활성화 여부
 } Obstacle;
+
+#endif
