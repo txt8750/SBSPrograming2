@@ -28,7 +28,7 @@ void Player_init(Player* player)
 // 장애물 정보 초기화
 void Obstacle_init() // 장애물은 배열의 형태로 위에서 선언 했으므로 구조체를 인수로 받지 않음
 {                    // 각 배열의 구조체에 for문을 사용하여 초기화
-	// 장애물의 pos와 type은 장애물이 활성화 되었을 때 설정을해야하므로 활성화 여부 값만 초기화
+	// 장애물의 pos는 장애물이 활성화 되었을 때 설정을해야하므로 활성화 여부 값만 초기화
 	for (int i = 0; i < MAX_OBSTACLE; i++)
 	{
 		obstacles[i].is_active = 0;
@@ -44,7 +44,7 @@ void Jelly_init()
 	for (int i = 0; i < MAX_JELLY; i++)
 	{
 		jellies[i].is_active = 0;
-		jellies[i].jelly_char = "@"; //젤리 형상
+		jellies[i].jelly_char = '@'; //젤리 형상
 		jellies[i].point = 20; // 젤리 한개 당 점수
 	}
 }
