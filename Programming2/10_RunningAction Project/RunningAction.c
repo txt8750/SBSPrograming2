@@ -15,7 +15,7 @@ Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
 int obstacle_tick = 0;
 int jelly_tick = 0;
 int game_speed = 1; // X축 이동속도(점수에 따라 증가)
-int game_delay_ms = 10; // 프레임 딜레이(ms)
+int game_delay_ms = 80; // 프레임 딜레이(ms)
 
 // 플레이어 업데이트 함수(점프 및 중력)
 void Player_update(Player* player)
@@ -139,6 +139,78 @@ void Show_Game(Player* player)
 	{
 		printf("-");
 	}
+
+	// 장애물 출력
+	for (int i = 0; i < MAX_OBSTACLE; i++)
+	{
+		if (obstacles[i].is_active && obstacles[i].pos.x < SCREEN_WIDTH)
+		{
+			for (int j = 0; j < obstacles[i].pos.height; j++)
+			{
+				gotoxy(obstacles[i].pos.x, obstacles[i].pos.y - j);
+				printf("##");
+			}
+		}
+	}
+
+	//젤리 출력
+	for (int i = 0; i < MAX_JELLY; i++)
+	{
+		if (jellies[i].is_active && jellies[i].pos.x < SCREEN_WIDTH)
+		{
+			gotoxy(jellies[i].pos.x, jellies[i].pos.y);
+			printf("%c", jellies[i].jelly_char);
+		}
+	}
+}
+
+// 플레이어 충돌 판정
+int Check_Collision(Player* player)
+{
+	int p_left = player->pos.x; // 플레이어의 왼쪽 충돌 범위
+	int p_right = player->pos.x + player->width - 1; // 플레이어의 오른쪽 충돌 범위
+	int p_bottom = player->pos.y;  // 플레이어의 아래쪽 충돌 범위
+	int p_top = player->pos.y - player->height + 1; // 플레이어의 위쪽 충돌 범위
+
+	// 장애물 충돌 판정
+	for (int i = 0; i < MAX_OBSTACLE; i++)
+	{
+		int o_left = obstacles[i].pos.x;
+		int o_right = obstacles[i].pos.x; // 장애물의 넓이는 한칸으로 고정
+		int o_bottom = obstacles[i].pos.y;
+		int o_top = obstacles[i].pos.y - obstacles[i].pos.height + 1;
+		// X축 충돌 판정
+		if (p_right >= o_left && p_left <= o_right)
+		{
+			if (p_bottom >= o_top && p_top <= o_bottom)
+			{
+				return 1; // 충돌발생
+			}
+		}
+	}
+	// 젤리 획득 판정
+	for (int i = 0; i < MAX_JELLY; i++)
+	{
+		if (jellies[i].is_active == 1)
+		{
+			int j_x = jellies[i].pos.x;
+			int j_y = jellies[i].pos.y;
+			if (p_right >= j_x && p_left <= j_x)
+			{
+				if (p_bottom >= j_y && p_top <= j_y)
+				{
+					player->score.current += jellies[i].point;
+					jellies[i].is_active = 0;
+					if (player->score.current > 0 && player->score.current % 200 == 0)
+					{
+						if (game_speed < 5) game_speed++;  //게임의 최대속도는 4
+						if (game_delay_ms > 20) game_delay_ms -= 10; // 속도가 증가할때마다 딜레이를 줄인다. 최소 20
+					}
+				}
+			}
+		}
+	}
+	return 0; // 충돌 없음
 }
 
 int main()
@@ -156,16 +228,18 @@ int main()
 	//게임 시작
 	while (is_running) {
 		// 입력 처리
+		int game_over = 0;
 		if (_kbhit())
 		{
 			char key = _getch(); // 입력을 받겠다.
 			if (key == 32 && player.is_jumping == 0)
 			{
 				player.is_jumping = 1;
-				player.gravity = 4; // 초기 점프속도 설정(점프 높이)
+				player.gravity = 3; // 초기 점프속도 설정(점프 높이)
 			}
-			else if (key == 'q' || key == 'Q')
+			if (key == 'Q' || key == 'q')
 			{
+				player.score.max = player.score.current;
 				break;
 			}
 		}
@@ -173,12 +247,20 @@ int main()
 		// 게임 로직 업데이트
 		Player_update(&player);
 		Objects_update();
+		game_over = Check_Collision(&player);
 
 		// 화면 출력
 		Show_Game(&player);
 
 		// 프레임 딜레이
 		Sleep(game_delay_ms);
+
+		if (game_over)
+		{
+			player.score.max = player.score.current;
+			break;
+		}
+
 	}
 
 	// 게임 종료 처리
@@ -205,3 +287,9 @@ int main()
 //   점프 안되는 버그 발생 -> player.is_jumping == 1;. == 이 아닌 = 으로 바꿔서 해결
 //   게임 종료 안되는 버그 발생 -> 단일 문자 비교시 ""가 아닌 ''로 비교
 //                               else if (key == 'q' || key == 'Q') 이렇게 바꿔서 해결
+
+
+// version 1.0.1(2025.11.26) : 장애물 충돌 및, 젤리 점수 구현 완료
+// BEST Score 저장 기능 구현 필요
+// 타이틀 화면 구현 필요
+// 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
