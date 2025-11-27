@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RunningAction.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Console.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Objects_init.c">
+    <ClCompile Include="11_main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="parson.c">
@@ -29,18 +23,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Console.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Objects_init.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="GlobalConst.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="parson.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>

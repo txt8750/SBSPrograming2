@@ -9,13 +9,17 @@
 #include "Struct.h" // 구조체 생성
 #include "Objects_init.h"
 #include "GlobalConst.h"
+#include "parson.h"
 
 Obstacle obstacles[MAX_OBSTACLE]; // 장애물 최대 개수. 배열
 Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
+JSON_Value* score_Value;
+JSON_Object* score_Object;
+
 int obstacle_tick = 0;
 int jelly_tick = 0;
 int game_speed = 1; // X축 이동속도(점수에 따라 증가)
-int game_delay_ms = 80; // 프레임 딜레이(ms)
+int game_delay_ms = 30; // 프레임 딜레이(ms)
 
 // 플레이어 업데이트 함수(점프 및 중력)
 void Player_update(Player* player)
@@ -215,6 +219,9 @@ int Check_Collision(Player* player)
 
 int main()
 {
+	score_Value = json_parse_file("Score.json");
+	score_Object = json_value_get_object(score_Value);
+
 	Player player;
 	int is_running = 1;
 
@@ -239,7 +246,10 @@ int main()
 			}
 			if (key == 'Q' || key == 'q')
 			{
-				player.score.max = player.score.current;
+				if (player.score.max < player.score.current)
+				{
+					player.score.max = player.score.current;
+				}
 				break;
 			}
 		}
@@ -257,7 +267,10 @@ int main()
 
 		if (game_over)
 		{
+			if (player.score.max < player.score.current)
+			{
 			player.score.max = player.score.current;
+			}
 			break;
 		}
 
@@ -273,7 +286,7 @@ int main()
 	printf("BEST SCORE : %d\n", player.score.max);
 	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
 	printf("Press any key to exit...");
-
+	json_value_free(score_Value);
 	return 0;
 
 }
@@ -293,3 +306,9 @@ int main()
 // BEST Score 저장 기능 구현 필요
 // 타이틀 화면 구현 필요
 // 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
+
+// version 1.0.2(2025.11.27) : BEST Score을 저장된 파일에서 가져와서 출력 및 사용하는 기능 구현
+// BEST Score 저장 기능 구현 필요
+// 타이틀 화면 구현 필요
+// 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
+// 게임 종료 시 타이틀 화면으로 되돌아가는 기능 구현 필요
