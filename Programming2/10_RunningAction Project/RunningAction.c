@@ -9,17 +9,14 @@
 #include "Struct.h" // 구조체 생성
 #include "Objects_init.h"
 #include "GlobalConst.h"
-#include "parson.h"
 
 Obstacle obstacles[MAX_OBSTACLE]; // 장애물 최대 개수. 배열
 Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
-JSON_Value* score_Value;
-JSON_Object* score_Object;
 
 int obstacle_tick = 0;
 int jelly_tick = 0;
 int game_speed = 1; // X축 이동속도(점수에 따라 증가)
-int game_delay_ms = 30; // 프레임 딜레이(ms)
+int game_delay_ms = 10; // 프레임 딜레이(ms)
 
 // 플레이어 업데이트 함수(점프 및 중력)
 void Player_update(Player* player)
@@ -179,16 +176,26 @@ int Check_Collision(Player* player)
 	// 장애물 충돌 판정
 	for (int i = 0; i < MAX_OBSTACLE; i++)
 	{
-		int o_left = obstacles[i].pos.x;
-		int o_right = obstacles[i].pos.x; // 장애물의 넓이는 한칸으로 고정
-		int o_bottom = obstacles[i].pos.y;
-		int o_top = obstacles[i].pos.y - obstacles[i].pos.height + 1;
-		// X축 충돌 판정
-		if (p_right >= o_left && p_left <= o_right)
+		if (obstacles[i].is_active)
 		{
-			if (p_bottom >= o_top && p_top <= o_bottom)
+			int o_left = obstacles[i].pos.x;
+			int o_right = obstacles[i].pos.x; // 장애물의 넓이는 한칸으로 고정
+			int o_bottom = obstacles[i].pos.y;
+			int o_top = obstacles[i].pos.y - obstacles[i].pos.height + 1;
+
+			// --- [수정] 스윕 테스트 (Sweep Test) 적용 ---
+			// 장애물의 이전 프레임 위치를 계산하여 충돌 경로를 확장합니다.
+			// 현재 장애물은 왼쪽으로 이동하므로 이전 위치는 현재 X좌표 + game_speed 입니다.
+			int o_prev_right = obstacles[i].pos.x + game_speed;
+
+
+			// X축 충돌 판정
+			if (p_right >= o_left && p_left <= o_prev_right)
 			{
-				return 1; // 충돌발생
+				if (p_bottom >= o_top && p_top <= o_bottom)
+				{
+					return 1; // 충돌발생
+				}
 			}
 		}
 	}
@@ -199,15 +206,20 @@ int Check_Collision(Player* player)
 		{
 			int j_x = jellies[i].pos.x;
 			int j_y = jellies[i].pos.y;
-			if (p_right >= j_x && p_left <= j_x)
+
+			// --- [수정] 스윕 테스트 (Sweep Test) 적용 ---
+			// 젤리의 이전 프레임 위치를 계산하여 획득 경로를 확장합니다.
+			int j_prev_x = jellies[i].pos.x + game_speed;
+
+			if (p_right >= j_x && p_left <= j_prev_x)
 			{
 				if (p_bottom >= j_y && p_top <= j_y)
 				{
 					player->score.current += jellies[i].point;
 					jellies[i].is_active = 0;
-					if (player->score.current > 0 && player->score.current % 200 == 0)
+					if (player->score.current > 0 && player->score.current % 20 == 0)
 					{
-						if (game_speed < 5) game_speed++;  //게임의 최대속도는 4
+						if (game_speed < 5) game_speed++;  //게임의 최대속도는 5
 						if (game_delay_ms > 20) game_delay_ms -= 10; // 속도가 증가할때마다 딜레이를 줄인다. 최소 20
 					}
 				}
@@ -217,16 +229,15 @@ int Check_Collision(Player* player)
 	return 0; // 충돌 없음
 }
 
+
+
 int main()
 {
-	score_Value = json_parse_file("Score.json");
-	score_Object = json_value_get_object(score_Value);
-
 	Player player;
 	int is_running = 1;
 
 	// 초기화
-	Player_init(&player); // 플레이어 정보 초기화
+	player = Player_init(); // 플레이어 정보 초기화
 	Obstacle_init(); // 장애물 정보 초기화
 	Jelly_init(); // 젤리 정보 초기화
 	hide_cursor(); // 커서 숨기기
@@ -249,6 +260,7 @@ int main()
 				if (player.score.max < player.score.current)
 				{
 					player.score.max = player.score.current;
+					SaveScore(&player);
 				}
 				break;
 			}
@@ -270,10 +282,10 @@ int main()
 			if (player.score.max < player.score.current)
 			{
 			player.score.max = player.score.current;
+			SaveScore(&player);
 			}
 			break;
 		}
-
 	}
 
 	// 게임 종료 처리
@@ -286,7 +298,6 @@ int main()
 	printf("BEST SCORE : %d\n", player.score.max);
 	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
 	printf("Press any key to exit...");
-	json_value_free(score_Value);
 	return 0;
 
 }
@@ -309,6 +320,12 @@ int main()
 
 // version 1.0.2(2025.11.27) : BEST Score을 저장된 파일에서 가져와서 출력 및 사용하는 기능 구현
 // BEST Score 저장 기능 구현 필요
+// 타이틀 화면 구현 필요
+// 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
+// 게임 종료 시 타이틀 화면으로 되돌아가는 기능 구현 필요
+
+// version 1.0.3(2025.11.28) : BEST 저장 및 로드 기능 구현 완료
+// 최고 속도 도달 시 젤리, 장애물 상호작용 안되는 버그 수정
 // 타이틀 화면 구현 필요
 // 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
 // 게임 종료 시 타이틀 화면으로 되돌아가는 기능 구현 필요

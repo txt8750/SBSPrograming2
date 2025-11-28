@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <stdio.h>
+#include "GlobalConst.h"
 
 // --- Windows API 콘솔 함수 ---
 
@@ -28,3 +29,42 @@ void clear_area(int min_x, int min_y, int max_x, int max_y) {
         }
     }
 }
+
+// --- [추가] 이중 버퍼링 구현 ---
+#define BUFFER_HEIGHT (GROUND_Y + 2) // 상태바(2줄) + 게임 영역(GROUND_Y-2) + 지면(1줄)
+static char g_buffer[BUFFER_HEIGHT][SCREEN_WIDTH + 1];
+
+// 버퍼 초기화
+void buffer_init() {
+    for (int i = 0; i < BUFFER_HEIGHT; i++) {
+        memset(g_buffer[i], ' ', SCREEN_WIDTH);
+        g_buffer[i][SCREEN_WIDTH] = '\0'; // 문자열 끝 표시
+    }
+}
+
+// 버퍼에 문자열 쓰기
+void buffer_write(int x, int y, const char* str) {
+    if (y < 0 || y >= BUFFER_HEIGHT) return;
+    int len = strlen(str);
+    for (int i = 0; i < len; i++) {
+        if (x + i >= 0 && x + i < SCREEN_WIDTH) {
+            g_buffer[y][x + i] = str[i];
+        }
+    }
+}
+
+// 버퍼에 단일 문자 쓰기
+void buffer_draw_char(int x, int y, char c) {
+    if (x >= 0 && x < SCREEN_WIDTH && y >= 0 && y < BUFFER_HEIGHT) {
+        g_buffer[y][x] = c;
+    }
+}
+
+// 버퍼를 콘솔에 한 번에 출력 (깜빡임 최소화)
+void buffer_render() {
+    gotoxy(0, 0); // 화면 시작 지점으로 커서 이동
+    for (int i = 0; i < BUFFER_HEIGHT; i++) {
+        printf("%s\n", g_buffer[i]);
+    }
+}
+// --- [추가] 이중 버퍼링 구현 ---

@@ -72,7 +72,7 @@ Jelly jellies[MAX_OBJECTS];      // 젤리 최대 5개
 int obstacle_tick = 0;
 int jelly_tick = 0;
 int game_speed = 1;     // X축 이동 속도 (점수에 따라 증가)
-int game_delay_ms = 10; // 프레임 딜레이 (ms)
+int game_delay_ms = 80; // 프레임 딜레이 (ms)
 
 
 
@@ -213,8 +213,12 @@ int check_collision(Player* p) {
             int o_top = obstacles[i].pos.y - obstacles[i].pos.height + 1;
             int o_bottom = obstacles[i].pos.y;
 
+            // --- [수정] 스윕 테스트 (Sweep Test) 적용: 빠른 속도에 의한 터널링 현상 방지 ---
+            // 장애물이 현재 위치(o_left)에서 이전 위치(o_left + game_speed)까지 이동한 경로를 모두 확인
+            int o_prev_left = obstacles[i].pos.x + game_speed;
+
             // X축 충돌
-            if (p_right >= o_left && p_left <= o_right) {
+            if (p_right >= o_left && p_left <= o_prev_left) {
                 if (obstacles[i].type == 0) { // 일반 장애물 충돌
                     // Y축 충돌
                     if (p_bottom >= o_top && p_top <= o_bottom) {
@@ -247,7 +251,7 @@ int check_collision(Player* p) {
                     jellies[i].is_active = 0; // 젤리 획득 후 제거
 
                     // 점수 기반 속도 증가 체크 (100점마다)
-                    if (p->score.current > 0 && p->score.current % 100 == 0) {
+                    if (p->score.current > 0 && p->score.current % 10 == 0) {
                         if (game_speed < 5) game_speed++;
                         if (game_delay_ms > 20) game_delay_ms -= 10;
                     }

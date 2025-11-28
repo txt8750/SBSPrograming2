@@ -1,5 +1,5 @@
 #pragma once
 
-void Player_init(Player* player);
+Player Player_init();
 void Obstacle_init();
 void Jelly_init();

@@ -1,2 +1,3 @@
 ﻿  RunningAction.c
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\10_RunningAction Project\RunningAction.c(263,6): warning C4013: 'SaveScore'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   10_RunningAction Project.vcxproj -> D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\x64\Debug\10_RunningAction Project.exe

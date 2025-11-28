@@ -127,12 +127,14 @@
     <ClCompile Include="Objects_init.c" />
     <ClCompile Include="parson.c" />
     <ClCompile Include="RunningAction.c" />
+    <ClCompile Include="ScoreSaveLoad.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h" />
     <ClInclude Include="GlobalConst.h" />
     <ClInclude Include="Objects_init.h" />
     <ClInclude Include="parson.h" />
+    <ClInclude Include="ScoreSaveLoad.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

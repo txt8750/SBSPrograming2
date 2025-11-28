@@ -1,11 +1,10 @@
 #include "Struct.h"
 #include "GlobalConst.h"
 #include "parson.h"
+#include "ScoreSaveLoad.h"
 
 extern Obstacle obstacles[];
 extern Jelly jellies[];
-extern JSON_Value* score_Value;
-extern JSON_Object* score_Object;
 
 // 플레이어 정보 초기화
 // pos x, pos y, max score, current score
@@ -15,19 +14,12 @@ extern JSON_Object* score_Object;
 // height. 플레이어의 높이(키, 충돌판정)
 // width. 플레이어의 X좌표 크기(충돌 판정)
 
-void Player_init(Player* player)
+Player Player_init()
 {
-	score_Value = json_parse_file("Score.json");
-	score_Object = json_value_get_object(score_Value);
-	player->pos.x = 5; // 플레이어의 초기 X좌표(사실상 고정 된 값)
-	player->pos.y = GROUND_Y; // 플레이어의 초기 Y좌표(지면에 서있음)
-	player->score.max = json_object_get_number(score_Object, "BEST Score"); // 최고 점수 초기화
-	player->score.current = 0; // 현재 점수 초기화
-	player->is_jumping = 0; // 점프 상태 초기화(0 : 점프 x, 1 : 점프 o)
-	player->gravity = 0; // 점프, 낙하 속도 초기화(점프하게되면 변경)
-	player->base_y = GROUND_Y; // 지면의 좌표
-	player->height = 2;
-	player->width = 2; // 2x2 사이즈의 플레이어 생성
+	Player player;
+	player = LoadScore();
+
+	return player;
 }
 
 // 장애물 정보 초기화
