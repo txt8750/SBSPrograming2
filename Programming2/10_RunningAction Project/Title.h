@@ -1,5 +1,6 @@
 #pragma once
+#include <stdbool.h>
 
-void GameTitle();
-void TitleRender(int* titleCursor);
+void GameTitle(int* TitleCursor);
+void TitleRender(int* TitleCursor);
 int SetDataYPosInput(int* y, int MINHEIGHT, int MAXHEIGHT, int interval);

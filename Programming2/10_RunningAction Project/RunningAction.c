@@ -12,6 +12,7 @@
 #include "GlobalConst.h"
 #include "Title.h"
 #include "ScoreSaveLoad.h"
+#include <stdbool.h>
 
 Obstacle obstacles[MAX_OBSTACLE]; // 장애물 최대 개수. 배열
 Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
@@ -119,7 +120,8 @@ void Objects_update()
 // 화면 출력 함수
 void Show_Game(Player* player)
 {
-	clear_area(0, 2, SCREEN_WIDTH, GROUND_Y);
+	clear_area(0,0, SCREEN_WIDTH, SCREEN_WIDTH);
+	//ScreenClear();
 	// 상태 정보 출력 (상단 Y축 0,1 라인)
 	gotoxy(0, 0);
 	printf("SCORE : %d / MAX SCORE : %d / SPEED : %d\n", player->score.current, player->score.max, game_speed);
@@ -233,20 +235,24 @@ void GameOver(const Player* player)
 {
 	// 게임 종료 처리
 	system("cls"); // 화면 지우기
-	gotoxy(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2);
-	printf("G A M E  O V E R\n");
-	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2);
-	printf("CURRENT SCORE : %d\n", player->score.current);
-	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
-	printf("BEST SCORE : %d\n", player->score.max);
-	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
-	printf("Press Enter key to exit...");
-	if (_kbhit())
+	while (1)
 	{
-		char key = _getch(); // 입력을 받겠다.
-		if (key == 13)
+		gotoxy(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2);
+		printf("G A M E  O V E R\n");
+		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2);
+		printf("CURRENT SCORE : %d\n", player->score.current);
+		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
+		printf("BEST SCORE : %d\n", player->score.max);
+		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
+		printf("Press Enter key to exit...");
+		if (_kbhit())
 		{
-			return;
+			char key = _getch(); // 입력을 받겠다.
+			if (key == 13)
+			{
+				//ScreenRelease();
+				break;
+			}
 		}
 	}
 }
@@ -255,8 +261,12 @@ void GameOver(const Player* player)
 void GameLoop(Player* player)
 {
 	int is_running = 1;
+	//ScreenInit();
 	while (is_running)
 	{
+		// 화면 출력
+		Show_Game(player);
+
 		int game_over = 0;
 		if (_kbhit())
 		{
@@ -274,17 +284,18 @@ void GameLoop(Player* player)
 					player->score.max = player->score.current;
 					SaveScore(player);
 				}
+				//ScreenRelease();
 				break;
 			}
 		}
 
-		// 게임 로직 업데이트
+		// 게임 로직 업데이트		Player_update(player);
 		Player_update(player);
 		Objects_update();
 		game_over = Check_Collision(player);
 
 		// 화면 출력
-		Show_Game(player);
+		//Show_Game(player);
 
 		// 프레임 딜레이
 		Sleep(game_delay_ms);
@@ -307,7 +318,7 @@ void GameScore(const Player* player)
 {
 	while (1)
 	{
-		ScreenClear(); // 화면 지우기
+		clear_area(0, 0, SCREEN_WIDTH, SCREEN_WIDTH);
 		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
 		printf("BEST SCORE : %d\n", player->score.max);
 		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
@@ -320,23 +331,47 @@ void GameScore(const Player* player)
 	}
 }
 
+
+
 int main()
 {
 	Player player;
+	int screen[SCREEN_WIDTH][SCREEN_WIDTH] = { 0 };
 
 	// 초기화
-	ScreenInit();
+	ScreenInit(); // 화면 버퍼 만들기
+	bool check = true;
+
 	player = Player_init(); // 플레이어 정보 초기화 (세이브 정보 로드)
 	Obstacle_init(); // 장애물 정보 초기화
 	Jelly_init(); // 젤리 정보 초기화
 	hide_cursor();
 	srand((unsigned int)time(NULL)); // 랜덤함수 초기화
 
+	//GameScore(&player);
+
 	int TitleCursor;
 	TitleCursor = 9;
+
+
+
 	while (1)
 	{
 		// 게임 타이틀 출력
+		/*
+		if (check)
+		{
+			GameTitle(&TitleCursor);
+			if (TitleCursor == 9)
+			{
+				check = false;
+			}
+		}
+		else
+		{
+			GameLoop(&player);
+		}
+		*/
 		GameTitle(&TitleCursor);
 		if (TitleCursor == 9)
 		{
@@ -350,6 +385,12 @@ int main()
 		{
 			break;
 		}
+		else
+		{
+
+		}
+		
+		
 	}
 	return 0;
 }

@@ -150,7 +150,7 @@ int main()
 {
 	// 화면을 2개 만들어 주세요
 	ScreenInit();
-	GameTitle();
+	//GameTitle();
 
 	while (1) // 게임 루프
 	{

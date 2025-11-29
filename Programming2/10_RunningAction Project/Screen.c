@@ -1,6 +1,7 @@
 #include "Screen.h"
 #include <stdio.h>
 #include <Windows.h>
+#include "GlobalConst.h"
 
 static int g_nScreenIndex;
 static HANDLE g_hScreen[2];
@@ -32,7 +33,7 @@ void ScreenClear()
 {
     COORD Coor = { 0,0 };
     DWORD dw;
-    FillConsoleOutputCharacter(g_hScreen[g_nScreenIndex], ' ', 80 * 25, Coor, &dw);
+    FillConsoleOutputCharacter(g_hScreen[g_nScreenIndex], ' ', SCREEN_WIDTH * SCREEN_WIDTH, Coor, &dw);
 }
 
 void ScreenRelease()
