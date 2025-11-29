@@ -30,6 +30,12 @@
     <ClCompile Include="ScoreSaveLoad.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Title.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -48,6 +54,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ScoreSaveLoad.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

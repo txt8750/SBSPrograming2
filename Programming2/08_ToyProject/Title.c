@@ -4,6 +4,7 @@
 #include "Screen.h"
 #include <stdio.h>
 #include <Windows.h>
+#include <conio.h>
 
 
 
@@ -92,7 +93,7 @@ void SetDataYPosInput(int* y, int MINHEIGHT, int MAXHEIGHT, int interval)
 		{
 			if (*y == 9)
 			{
-				print("게임시작");
+				printf("게임시작");
 			}
 			else if (*y == 11)
 			{

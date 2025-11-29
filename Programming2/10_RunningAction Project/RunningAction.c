@@ -6,9 +6,12 @@
 #include <windows.h> // 콘솔 제어 및 Sleep 함수 사용
 #include <conio.h>
 #include "Console.h" // 콘솔 제어 함수 생성
+#include "Screen.h"
 #include "Struct.h" // 구조체 생성
 #include "Objects_init.h"
 #include "GlobalConst.h"
+#include "Title.h"
+#include "ScoreSaveLoad.h"
 
 Obstacle obstacles[MAX_OBSTACLE]; // 장애물 최대 개수. 배열
 Jelly jellies[MAX_JELLY]; // 젤리 최대개수. 배열
@@ -116,8 +119,7 @@ void Objects_update()
 // 화면 출력 함수
 void Show_Game(Player* player)
 {
-	clear_area(0, 2, SCREEN_WIDTH, GROUND_Y); // Console.c에 있는 화면 지우는 함수
-
+	clear_area(0, 2, SCREEN_WIDTH, GROUND_Y);
 	// 상태 정보 출력 (상단 Y축 0,1 라인)
 	gotoxy(0, 0);
 	printf("SCORE : %d / MAX SCORE : %d / SPEED : %d\n", player->score.current, player->score.max, game_speed);
@@ -125,12 +127,9 @@ void Show_Game(Player* player)
 
 	// 플레이어 출력
 	gotoxy(player->pos.x, player->pos.y - 1);
-	printf("ㅁ");
+	printf("@@");
 	gotoxy(player->pos.x, player->pos.y);
-	printf("/\\");
-	Sleep(50);
-	gotoxy(player->pos.x, player->pos.y);
-	printf("\\/");
+	printf("PP");;
 
 
 
@@ -229,77 +228,130 @@ int Check_Collision(Player* player)
 	return 0; // 충돌 없음
 }
 
-
-
-int main()
+// 게임 종료 시 출력 함수
+void GameOver(const Player* player)
 {
-	Player player;
+	// 게임 종료 처리
+	system("cls"); // 화면 지우기
+	gotoxy(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2);
+	printf("G A M E  O V E R\n");
+	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2);
+	printf("CURRENT SCORE : %d\n", player->score.current);
+	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
+	printf("BEST SCORE : %d\n", player->score.max);
+	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
+	printf("Press Enter key to exit...");
+	if (_kbhit())
+	{
+		char key = _getch(); // 입력을 받겠다.
+		if (key == 13)
+		{
+			return;
+		}
+	}
+}
+
+// 게임 실행 함수
+void GameLoop(Player* player)
+{
 	int is_running = 1;
-
-	// 초기화
-	player = Player_init(); // 플레이어 정보 초기화
-	Obstacle_init(); // 장애물 정보 초기화
-	Jelly_init(); // 젤리 정보 초기화
-	hide_cursor(); // 커서 숨기기
-	srand((unsigned int)time(NULL)); // 랜덤함수 초기화
-
-	//게임 시작
-	while (is_running) {
-		// 입력 처리
+	while (is_running)
+	{
 		int game_over = 0;
 		if (_kbhit())
 		{
 			char key = _getch(); // 입력을 받겠다.
-			if (key == 32 && player.is_jumping == 0)
+			if (key == 32 && player->is_jumping == 0)
 			{
-				player.is_jumping = 1;
-				player.gravity = 3; // 초기 점프속도 설정(점프 높이)
+				player->is_jumping = 1;
+				player->gravity = 3; // 초기 점프속도 설정(점프 높이)
 			}
 			if (key == 'Q' || key == 'q')
 			{
-				if (player.score.max < player.score.current)
+				// current score가 max score보다 높은 경우 파일에 max score 갱신
+				if (player->score.max < player->score.current)
 				{
-					player.score.max = player.score.current;
-					SaveScore(&player);
+					player->score.max = player->score.current;
+					SaveScore(player);
 				}
 				break;
 			}
 		}
 
 		// 게임 로직 업데이트
-		Player_update(&player);
+		Player_update(player);
 		Objects_update();
-		game_over = Check_Collision(&player);
+		game_over = Check_Collision(player);
 
 		// 화면 출력
-		Show_Game(&player);
+		Show_Game(player);
 
 		// 프레임 딜레이
 		Sleep(game_delay_ms);
 
 		if (game_over)
 		{
-			if (player.score.max < player.score.current)
+			if (player->score.max < player->score.current)
 			{
-			player.score.max = player.score.current;
-			SaveScore(&player);
+				player->score.max = player->score.current;
+				SaveScore(player);
 			}
+			GameOver(player);
 			break;
 		}
 	}
+}
 
-	// 게임 종료 처리
-	system("cls"); // 화면 지우기
-	gotoxy(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2);
-	printf("G A M E  O V E R\n");
-	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2);
-	printf("CURRENT SCORE : %d\n", player.score.current);
-	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
-	printf("BEST SCORE : %d\n", player.score.max);
-	gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
-	printf("Press any key to exit...");
+// 스코어 확인 페이지 함수
+void GameScore(const Player* player)
+{
+	while (1)
+	{
+		ScreenClear(); // 화면 지우기
+		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
+		printf("BEST SCORE : %d\n", player->score.max);
+		gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
+		printf("Press 'Q' key to exit...");
+		char key = _getch(); // 입력을 받겠다.
+		if (key == 'Q' || key == 'q')
+		{
+			break;
+		}
+	}
+}
+
+int main()
+{
+	Player player;
+
+	// 초기화
+	ScreenInit();
+	player = Player_init(); // 플레이어 정보 초기화 (세이브 정보 로드)
+	Obstacle_init(); // 장애물 정보 초기화
+	Jelly_init(); // 젤리 정보 초기화
+	hide_cursor();
+	srand((unsigned int)time(NULL)); // 랜덤함수 초기화
+
+	int TitleCursor;
+	TitleCursor = 9;
+	while (1)
+	{
+		// 게임 타이틀 출력
+		GameTitle(&TitleCursor);
+		if (TitleCursor == 9)
+		{
+			GameLoop(&player);
+		}
+		else if (TitleCursor == 11)
+		{
+			GameScore(&player);
+		}
+		else if (TitleCursor == 13)
+		{
+			break;
+		}
+	}
 	return 0;
-
 }
 
 
@@ -329,3 +381,10 @@ int main()
 // 타이틀 화면 구현 필요
 // 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
 // 게임 종료 시 타이틀 화면으로 되돌아가는 기능 구현 필요
+
+// version 1.0.4(2025.11.29) : 타이틀 화면 및 커서 움직임 구현
+// 타이틀 화면에서 게임 종료 구현
+// Gameloop, Score 페이지로 넘어가지 않는 오류 발생
+//  ㄴ> Gameloop 함수, Gamescore 함수 따로 실행 시 정상 실행 되나
+//      if 문에서 TitleCursor에 따라 실행 시 실행 불가
+//      응용 프로그램을 제대로 시작하지 못했습니다(0xc0000142). 발생
