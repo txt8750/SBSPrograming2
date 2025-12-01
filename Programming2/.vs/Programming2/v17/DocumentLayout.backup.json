@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\RunningAction.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|solutionrelative:10_RunningAction Project\\RunningAction.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\RunningAction.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\RunningAction.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|solutionrelative:10_RunningAction Project\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Objects_init.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Objects_init.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Title.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|solutionrelative:10_RunningAction Project\\Title.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\ScoreSaveLoad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|solutionrelative:10_RunningAction Project\\ScoreSaveLoad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Struct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Struct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Title.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{97FF820D-8078-427D-826B-565F5EC53CFB}|10_RunningAction Project\\10_RunningAction Project.vcxproj|solutionrelative:10_RunningAction Project\\Title.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\ScoreSaveLoad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\ScoreSaveLoad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Screen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Screen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C1181A1D-78EB-446E-9407-FE712E12596C}|08_ToyProject\\08_ToyProject.vcxproj|solutionrelative:08_ToyProject\\Screen.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\GlobalConst.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\GlobalConst.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{968175EF-D815-4819-BF2B-125E7B3A3652}|09_RunningAction Project\\09_RunningAction Project.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\09_RunningAction Project\\RunnincAction_P.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{968175EF-D815-4819-BF2B-125E7B3A3652}|09_RunningAction Project\\09_RunningAction Project.vcxproj|solutionrelative:09_RunningAction Project\\RunnincAction_P.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Objects_init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Objects_init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Title.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C03EB87-F45B-4A10-B008-8D3795987CF0}|13_RunningAction_Buffer\\13_RunningAction_Buffer.vcxproj|solutionrelative:13_RunningAction_Buffer\\Title.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,137 +53,157 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 330,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 339,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScoreSaveLoad.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\ScoreSaveLoad.c",
-              "RelativeDocumentMoniker": "10_RunningAction Project\\ScoreSaveLoad.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\ScoreSaveLoad.c",
-              "RelativeToolTip": "10_RunningAction Project\\ScoreSaveLoad.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-29T09:09:51.323Z",
+              "DocumentIndex": 6,
+              "Title": "GlobalConst.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\GlobalConst.h",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\GlobalConst.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\GlobalConst.h",
+              "RelativeToolTip": "13_RunningAction_Buffer\\GlobalConst.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T08:30:04.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Screen.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Screen.c",
-              "RelativeDocumentMoniker": "10_RunningAction Project\\Screen.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Screen.c",
-              "RelativeToolTip": "10_RunningAction Project\\Screen.c",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ScoreSaveLoad.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\ScoreSaveLoad.c",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\ScoreSaveLoad.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\ScoreSaveLoad.c",
+              "RelativeToolTip": "13_RunningAction_Buffer\\ScoreSaveLoad.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-29T07:43:44.729Z",
+              "WhenOpened": "2025-12-01T08:28:05.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Objects_init.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Objects_init.h",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Objects_init.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Objects_init.h",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Objects_init.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T08:27:48.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RunningAction.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\RunningAction.c",
-              "RelativeDocumentMoniker": "10_RunningAction Project\\RunningAction.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\RunningAction.c*",
-              "RelativeToolTip": "10_RunningAction Project\\RunningAction.c*",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAAAAABAAACAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\RunningAction.c",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\RunningAction.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\RunningAction.c",
+              "RelativeToolTip": "13_RunningAction_Buffer\\RunningAction.c",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAAFUBAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-25T07:02:35.172Z",
+              "WhenOpened": "2025-12-01T07:06:23.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Console.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Console.h",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Console.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Console.h",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Console.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T08:30:54.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Console.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Console.c",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Console.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Console.c",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Console.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-01T08:31:09.283Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 330,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 321,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Title.h",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Title.h",
-              "RelativeDocumentMoniker": "10_RunningAction Project\\Title.h",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Title.h",
-              "RelativeToolTip": "10_RunningAction Project\\Title.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Screen.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Screen.h",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Screen.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Screen.h",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Screen.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-29T08:48:19.535Z",
+              "WhenOpened": "2025-12-01T07:40:19.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Title.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Title.c",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Title.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Title.c",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Title.c",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-01T07:07:09.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Title.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Title.c",
-              "RelativeDocumentMoniker": "10_RunningAction Project\\Title.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\10_RunningAction Project\\Title.c",
-              "RelativeToolTip": "10_RunningAction Project\\Title.c",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-29T07:49:58.203Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "b387e23c-b60c-4291-8628-be06cecab6bc",
-        "Display": 0,
-        "X": 751,
-        "Y": 226,
-        "Width": 832,
-        "Height": 780,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\main.c",
-              "RelativeDocumentMoniker": "08_ToyProject\\main.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\main.c",
-              "RelativeToolTip": "08_ToyProject\\main.c",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAiwJcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-29T04:32:43.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RunnincAction_P.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\09_RunningAction Project\\RunnincAction_P.c",
-              "RelativeDocumentMoniker": "09_RunningAction Project\\RunnincAction_P.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\09_RunningAction Project\\RunnincAction_P.c",
-              "RelativeToolTip": "09_RunningAction Project\\RunnincAction_P.c",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAywDUBAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-29T05:57:23.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Screen.c",
-              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.c",
-              "RelativeDocumentMoniker": "08_ToyProject\\Screen.c",
-              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\08_ToyProject\\Screen.c",
-              "RelativeToolTip": "08_ToyProject\\Screen.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Screen.c",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Screen.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Screen.c",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Screen.c",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwDUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-29T06:49:06.809Z"
+              "WhenOpened": "2025-12-01T07:08:07.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Struct.h",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Struct.h",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Struct.h",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Struct.h",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Struct.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T08:03:05.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Objects_init.c",
+              "DocumentMoniker": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Objects_init.c",
+              "RelativeDocumentMoniker": "13_RunningAction_Buffer\\Objects_init.c",
+              "ToolTip": "D:\\SBS\uAC8C\uC784\uC544\uCE74\uB370\uBBF8\\1.GameProgram\\SBSPrograming2\\Programming2\\13_RunningAction_Buffer\\Objects_init.c",
+              "RelativeToolTip": "13_RunningAction_Buffer\\Objects_init.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-01T08:03:20.96Z",
+              "EditorCaption": ""
             }
           ]
         }

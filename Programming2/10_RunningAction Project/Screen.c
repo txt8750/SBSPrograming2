@@ -33,7 +33,7 @@ void ScreenClear()
 {
     COORD Coor = { 0,0 };
     DWORD dw;
-    FillConsoleOutputCharacter(g_hScreen[g_nScreenIndex], ' ', SCREEN_WIDTH * SCREEN_WIDTH, Coor, &dw);
+    FillConsoleOutputCharacter(g_hScreen[g_nScreenIndex], ' ', SCREEN_WIDTH * GROUND_Y, Coor, &dw);
 }
 
 void ScreenRelease()
