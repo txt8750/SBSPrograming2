@@ -31,6 +31,7 @@ typedef struct Player {
     int base_y;         // 지면의 y 좌표
     int height;         // 플레이어의 높이 (충돌 판정용)
     int width;          // 플레이어의 너비 (충돌 판정용)
+    int behavior;       // 0 : 기본, 1 : 슬라이드
 } Player;
 
 typedef struct ObstaclePos { // 장애물의 위치
@@ -42,6 +43,7 @@ typedef struct ObstaclePos { // 장애물의 위치
 typedef struct Obstacle {
     O_Pos pos;          // 오브젝트 위치
     int is_active;      // 활성화 여부
+    //char shape[10][10];
 } Obstacle;
 
 #endif

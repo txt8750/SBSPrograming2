@@ -123,19 +123,19 @@ void Show_Game(Player* player)
 	//clear_area(0,0, SCREEN_WIDTH, SCREEN_WIDTH);
 	ScreenClear();
 	// 상태 정보 출력 (상단 Y축 0,1 라인)
-	ScreenPrintf(0,0,"SCORE : %d / MAX SCORE : %d / SPEED : %d\n", player->score.current, player->score.max, game_speed);
-	ScreenPrintf(0,1,"======================================================================\n");
+	ScreenPrintf(0,0, YELLOW, BLACK, "SCORE : %d / MAX SCORE : %d / SPEED : %d\n", player->score.current, player->score.max, game_speed);
+	ScreenPrintf(0,1, YELLOW, BLACK, "======================================================================\n");
 
 	// 플레이어 출력
 	//gotoxy(player->pos.x, player->pos.y - 1);
-	ScreenPrint(player->pos.x, player->pos.y - 1, "@@");
+	ScreenPrint(player->pos.x, player->pos.y - 1, BLUE, BLACK, "@@");
 	//gotoxy(player->pos.x, player->pos.y);
-	ScreenPrint(player->pos.x, player->pos.y, "PP");;
+	ScreenPrint(player->pos.x, player->pos.y, BLUE, BLACK, "PP");;
 
 	// 지면 출력
 	for (int i = 0; i < SCREEN_WIDTH; i++)
 	{
-		ScreenPrint(i, GROUND_Y + 1, "-");
+		ScreenPrint(i, GROUND_Y + 1, YELLOW, BLACK, "-");
 	}
 
 	// 장애물 출력
@@ -146,7 +146,7 @@ void Show_Game(Player* player)
 			for (int j = 0; j < obstacles[i].pos.height; j++)
 			{
 				//gotoxy(obstacles[i].pos.x, obstacles[i].pos.y - j);
-				ScreenPrint(obstacles[i].pos.x, obstacles[i].pos.y - j, "##");
+				ScreenPrint(obstacles[i].pos.x, obstacles[i].pos.y - j, RED, BLACK, "##");
 			}
 		}
 	}
@@ -157,8 +157,9 @@ void Show_Game(Player* player)
 		if (jellies[i].is_active && jellies[i].pos.x < SCREEN_WIDTH)
 		{
 			//gotoxy(jellies[i].pos.x, jellies[i].pos.y);
-			ScreenPrintf(jellies[i].pos.x, jellies[i].pos.y,"%c", jellies[i].jelly_char);
+			ScreenPrintf(jellies[i].pos.x, jellies[i].pos.y, DARKYELLOW, BLACK, "%c", jellies[i].jelly_char);
 		}
+			
 	}
 	ScreenFlipping();
 }
@@ -235,13 +236,17 @@ void GameOver(const Player* player)
 	// 게임 종료 처리
 		ScreenClear(); // 화면 지우기
 		//gotoxy(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2);
-		ScreenPrint(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2, "G A M E  O V E R\n");
+		ScreenPrint(SCREEN_WIDTH / 2 - 8, GROUND_Y / 2, RED, BLACK, "G A M E  O V E R\n");
 		//gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2);
-		ScreenPrintf(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2, "CURRENT SCORE : % d\n", player->score.current);
+		ScreenPrintf(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 2, WHITE, BLACK, "CURRENT SCORE : ", player->score.current);
+		ScreenPrintf(SCREEN_WIDTH / 2 + 6, GROUND_Y / 2 + 2, SKYBLUE, BLACK, "%d", player->score.current);
 		//gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
-		ScreenPrintf(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4, "BEST SCORE : %d\n", player->score.max);
+		ScreenPrintf(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4, WHITE, BLACK, "BEST SCORE : ", player->score.max);
+		ScreenPrintf(SCREEN_WIDTH / 2 + 3, GROUND_Y / 2 + 4, SKYBLUE, BLACK, "%d", player->score.max);
 		//gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
-		ScreenPrint(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6,"Press Enter key to exit...");
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6, WHITE, BLACK, "Press");
+		ScreenPrint(SCREEN_WIDTH / 2 - 4, GROUND_Y / 2 + 6, YELLOW, BLACK, "Enter");
+		ScreenPrint(SCREEN_WIDTH / 2 + 2, GROUND_Y / 2 + 6, WHITE, BLACK, "key to exit...");
 		ScreenFlipping();
 		if (_kbhit())
 		{
@@ -314,9 +319,12 @@ void GameScore(const Player* player)
 {
 		ScreenClear();
 		//gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4);
-		ScreenPrintf(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4, "BEST SCORE : %d\n", player->score.max);
+		ScreenPrintf(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 4, WHITE, BLACK, "BEST SCORE : \n", player->score.max);
+		ScreenPrintf(SCREEN_WIDTH / 2 + 3, GROUND_Y / 2 + 4, SKYBLUE, BLACK, "%d", player->score.max);
 		//gotoxy(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6);
-		ScreenPrint(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6, "Press 'Q' key to exit...");
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, GROUND_Y / 2 + 6, WHITE, BLACK, "Press Q key to exit...");
+		ScreenPrint(SCREEN_WIDTH / 2 - 4, GROUND_Y / 2 + 6, YELLOW, BLACK, "Q key to exit...");
+		ScreenPrint(SCREEN_WIDTH / 2 - 2, GROUND_Y / 2 + 6, WHITE, BLACK, "key to exit...");
 		ScreenFlipping();
 		char key = _getch(); // 입력을 받겠다.
 		if (key == 'Q' || key == 'q')
@@ -363,50 +371,3 @@ int main()
 	}
 	return 0;
 }
-
-
-// version 1.0.0(2025.11.25) : 맵, 달리기 구현 완료
-//   점수, 장애물, 젤리 구현 필요
-//   BEST Score 구현 필요
-//   타이틀 화면 구현 필요
-//   점수 저장 시스템 구현 필요 (파일 입출력)
-//   점프 안되는 버그 발생 -> player.is_jumping == 1;. == 이 아닌 = 으로 바꿔서 해결
-//   게임 종료 안되는 버그 발생 -> 단일 문자 비교시 ""가 아닌 ''로 비교
-//                               else if (key == 'q' || key == 'Q') 이렇게 바꿔서 해결
-
-
-// version 1.0.1(2025.11.26) : 장애물 충돌 및, 젤리 점수 구현 완료
-// BEST Score 저장 기능 구현 필요
-// 타이틀 화면 구현 필요
-// 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
-
-// version 1.0.2(2025.11.27) : BEST Score을 저장된 파일에서 가져와서 출력 및 사용하는 기능 구현
-// BEST Score 저장 기능 구현 필요
-// 타이틀 화면 구현 필요
-// 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
-// 게임 종료 시 타이틀 화면으로 되돌아가는 기능 구현 필요
-
-// version 1.0.3(2025.11.28) : BEST 저장 및 로드 기능 구현 완료
-// 최고 속도 도달 시 젤리, 장애물 상호작용 안되는 버그 수정
-// 타이틀 화면 구현 필요
-// 젤리, 장애물, 플레이어 구분을 위한 문자 색깔 구별 필요
-// 게임 종료 시 타이틀 화면으로 되돌아가는 기능 구현 필요
-
-// version 1.0.4(2025.11.29) : 타이틀 화면 및 커서 움직임 구현
-// 타이틀 화면에서 게임 종료 구현
-// Gameloop, Score 페이지로 넘어가지 않는 오류 발생
-//  ㄴ> Gameloop 함수, Gamescore 함수 따로 실행 시 정상 실행 되나
-//      if 문에서 TitleCursor에 따라 실행 시 실행 불가
-//      응용 프로그램을 제대로 시작하지 못했습니다(0xc0000142). 발생
-//      버퍼 사용하지 않고 printf로 사용하여 임시 구현
-
-// version 1.0.5(2025.12.01) : 타이틀 화면에서 모든 페이지로 정상적으로 넘어가도록 구현
-// Title -> GameStart -> GameOver 정상 동작
-// Title -> Score -> 정상동작
-// GameOver 후 Enter키 입력하면 Title화면으로 돌아가는 기능 구현
-// Score페이지 확인 후 Q키 누르면 Title화면으로 돌아가는 기능 구현
-// Title -> Quit 기능 구현
-//		버그리스트
-//		게임 실행 중 하나의 장애물의 높이가 바뀌는 버그 발생
-//		기능 추가 사항
-//		플레이어, 젤리, 장애물 색깔 입히기

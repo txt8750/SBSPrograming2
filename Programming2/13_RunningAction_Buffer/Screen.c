@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "GlobalConst.h"
 #include <stdarg.h>
+#include "console_color.h"
 
 #define BUFFER_SIZE 512
 
@@ -45,15 +46,17 @@ void ScreenRelease()
     CloseHandle(g_hScreen[1]);
 }
 
-void ScreenPrint(int x, int y, char* string)
+void ScreenPrint(int x, int y, COLOR text_color, COLOR bg_color, char* string)
 {
     DWORD dw;
     COORD CursorPosition = { x, y };
     SetConsoleCursorPosition(g_hScreen[g_nScreenIndex], CursorPosition);
+    SetColor(g_hScreen[g_nScreenIndex], text_color, bg_color);
     WriteFile(g_hScreen[g_nScreenIndex], string, strlen(string), &dw, NULL);
+    SetColor(g_hScreen[g_nScreenIndex], text_color, bg_color);
 }
 
-void ScreenPrintf(int x, int y, const char* format, ...)
+void ScreenPrintf(int x, int y, COLOR text_color, COLOR bg_color, const char* format, ...)
 {
     char temp_buffer[BUFFER_SIZE]; // 서식이 적용된 문자열을 저장할 임시 버퍼
     va_list args;                  // 가변 인자 목록을 위한 변수
@@ -78,10 +81,11 @@ void ScreenPrintf(int x, int y, const char* format, ...)
 
     // 버퍼의 커서 위치 설정
     SetConsoleCursorPosition(hScreen, CursorPosition);
-
+    SetColor(g_hScreen[g_nScreenIndex], text_color, bg_color);
     // 서식이 적용된 문자열을 콘솔 버퍼에 쓰기
     DWORD dw;
     // len이 BUFFER_SIZE를 초과하지 않도록 min(len, BUFFER_SIZE - 1) 등을 사용할 수도 있지만, 
     // vsnprintf가 이미 안전하게 처리했으므로 len을 사용합니다.
     WriteFile(hScreen, temp_buffer, len, &dw, NULL);
+    SetColor(g_hScreen[g_nScreenIndex], text_color, bg_color);
 }

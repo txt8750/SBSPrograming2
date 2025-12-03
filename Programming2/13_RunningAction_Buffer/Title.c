@@ -24,41 +24,43 @@ void GameTitle(int* TitleCursor)
 
 void TitleRender(int* TitleCursor)
 {
-
 	ScreenClear();
 	//clear_area(0,0, SCREEN_WIDTH, SCREEN_WIDTH);
+	//SetColor(1, 0);
+	ScreenPrint(SCREEN_WIDTH / 2 - 10, 1, YELLOW, BLACK, "Let's");
+	ScreenPrint(8, 2, SKYBLUE, BLACK, " ____  _   _ _   _ _   _ ___ _   _  ____ _");
+	ScreenPrint(8, 3, SKYBLUE, BLACK, "|  _ \\| | | | \\ | | \\ | |_ _| \\ | |/ ___| |");
+	ScreenPrint(8, 4, SKYBLUE, BLACK, "| |_) | | | |  \\| |  \\| || ||  \\| | |  _| |");
+	ScreenPrint(8, 5, SKYBLUE, BLACK, "|  _ <| |_| | |\\  | |\\  || || |\\  | |_| |_|");
+	ScreenPrint(8, 6, SKYBLUE, BLACK, "|_| \\_\\\\___/|_| \\_|_| \\_|___|_| \\_|\\____(_)");
+	if (*TitleCursor == 9)
+	{
+		ScreenPrint(SCREEN_WIDTH /2 - 10, 9, RED, BLACK, "Start");
+	}
+	else
+	{
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, 9, WHITE, BLACK, "Start");
+	}
 
-	ScreenPrint(15, 1, " ____  _   _ _   _ _   _ ___ _   _  ____ _");
-	ScreenPrint(15, 2, "|  _ \\| | | | \\ | | \\ | |_ _| \\ | |/ ___| |");
-	ScreenPrint(15, 3, "| |_) | | | |  \\| |  \\| || ||  \\| | |  _| |");
-	ScreenPrint(15, 4, "|  _ <| |_| | |\\  | |\\  || || |\\  | |_| |_|");
-	ScreenPrint(15, 5, "|_| \\_\\\\___/|_| \\_|_| \\_|___|_| \\_|\\____(_)");
-	ScreenPrint(21, 9, "Start");
-	ScreenPrint(21, 11, "Score");
-	ScreenPrint(21, 13, "Quit");
-	ScreenPrint(18, *TitleCursor, ">>");
+	if (*TitleCursor == 11)
+	{
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, 11, RED, BLACK, "Score");
+	}
+	else
+	{
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, 11, WHITE, BLACK, "Score");
+	}
+
+	if (*TitleCursor == 13)
+	{
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, 13, RED, BLACK, "Quit");
+	}
+	else
+	{
+		ScreenPrint(SCREEN_WIDTH / 2 - 10, 13, WHITE, BLACK, "Quit");
+	}
+	ScreenPrint(SCREEN_WIDTH / 2 - 12, *TitleCursor, RED, BLACK, ">>");
 	ScreenFlipping();
-
-	/*gotoxy(15, 1);
-	printf(" ____  _   _ _   _ _   _ ___ _   _  ____ _");
-	gotoxy(15, 2);
-	printf("|  _ \\| | | | \\ | | \\ | |_ _| \\ | |/ ___| |");
-	gotoxy(15, 3);
-	printf("| |_) | | | |  \\| |  \\| || ||  \\| | |  _| |");
-	gotoxy(15, 4);
-	printf("|  _ <| |_| | |\\  | |\\  || || |\\  | |_| |_|");
-	gotoxy(15, 5);
-	printf("|_| \\_\\\\___/|_| \\_|_| \\_|___|_| \\_|\\____(_)");
-	gotoxy(21, 9);
-	printf("Start");
-	gotoxy(21, 11);
-	printf("Score");
-	gotoxy(21, 13);
-	printf("Quit");
-	gotoxy(18, *TitleCursor);
-	printf(">>");*/
-
-
 }
 
 
