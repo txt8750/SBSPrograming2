@@ -1,2 +1,5 @@
 ﻿  RunningAction.c
+  Title.c
+  코드를 생성하고 있습니다...
+D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\13_RunningAction_Buffer\Title.c(107,1): warning C4715: 'SetDataYPosInput': 모든 제어 경로에서 값을 반환하지는 않습니다.
   13_RunningAction_Buffer.vcxproj -> D:\SBS게임아카데미\1.GameProgram\SBSPrograming2\Programming2\x64\Debug\13_RunningAction_Buffer.exe

@@ -8,21 +8,19 @@
 
 void GameTitle(int* TitleCursor)
 {
-	int input = 0;
-
+	int temp = 0;
 	// 입력했을 때 Y 좌표가 변경 되어야 한다.
 	while (1)
 	{
-		int temp = SetDataYPosInput(TitleCursor, 9, 13, 2);
-		TitleRender(TitleCursor);
+		temp = SetDataYPosInput(TitleCursor, 9, 13, 2);
+		TitleRender(TitleCursor); // 함수 호출
 		if (temp == 1)
 		{
 			break;
 		}
 	}
 }
-
-void TitleRender(int* TitleCursor)
+void TitleRender(int* TitleCursor)  // 함수 본문
 {
 	ScreenClear();
 	//clear_area(0,0, SCREEN_WIDTH, SCREEN_WIDTH);
@@ -60,6 +58,8 @@ void TitleRender(int* TitleCursor)
 		ScreenPrint(SCREEN_WIDTH / 2 - 10, 13, WHITE, BLACK, "Quit");
 	}
 	ScreenPrint(SCREEN_WIDTH / 2 - 12, *TitleCursor, RED, BLACK, ">>");
+	ScreenPrint(SCREEN_WIDTH / 2 - 20, 16, WHITE, BLACK, "↑,↓ : Move | Enter : Select");
+	
 	ScreenFlipping();
 }
 
@@ -71,6 +71,7 @@ int SetDataYPosInput(int* y, int MINHEIGHT, int MAXHEIGHT, int interval)
 	if (_kbhit()) // 키보드를 입력하면 True
 	{
 		input = _getch();
+		
 
 		if (input == 224 || input == 0)
 		{

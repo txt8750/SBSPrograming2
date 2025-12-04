@@ -125,6 +125,7 @@ void Show_Game(Player* player)
 	// 상태 정보 출력 (상단 Y축 0,1 라인)
 	ScreenPrintf(0,0, YELLOW, BLACK, "SCORE : %d / MAX SCORE : %d / SPEED : %d\n", player->score.current, player->score.max, game_speed);
 	ScreenPrintf(0,1, YELLOW, BLACK, "======================================================================\n");
+	ScreenPrint(2, GROUND_Y + 2, WHITE, BLACK, "Space : Jump | Q : Return to Title");
 
 	// 플레이어 출력
 	//gotoxy(player->pos.x, player->pos.y - 1);
@@ -312,6 +313,7 @@ void GameLoop(Player* player)
 			break;
 		}
 	}
+	return;
 }
 
 // 스코어 확인 페이지 함수
@@ -369,5 +371,5 @@ int main()
 		}
 		
 	}
-	return 0;
+	//return 0;
 }
